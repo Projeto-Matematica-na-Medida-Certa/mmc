@@ -39,17 +39,17 @@ pi=math.pi
 
 ##########################################
 
-# Fator que define onde se concentrará a densidade de probalilidade dos destinos finais
+# Fator que define onde se concentrará a densidade de probalilidade dos caminhos pecorridos por doriam.
 # O fator rand será comparado com o valor de "coin", que será constantemente setado como uma
 # variável aleatória entre 0 a 100, de foma que:
 #
-# 0  <= rand < 50  -> dorian tende a ir para a direita
-# 50 <  rand < 100 -> dorian tende a ir para a esquerda
-#       rand = 50  -> dorian tende a ir para o meio
+# 0  <= rand <  50  -> dorian tende a ir para a direita
+# 50 <  rand <= 100 -> dorian tende a ir para a esquerda
+#       rand =  50  -> dorian tende a ir pelo o meio
 #
 # Observação: Com "tendência", leia-se por: Há uma maior probabilidade de os caminhos se orientem para esse sentido
 
-rand = 82
+rand = 50
 
 ##########################################
 
