@@ -9,7 +9,7 @@ import random
 ############ Declaração dos icones do mapa ############
 
 dorian = turtle.Turtle() # Origem do caminho, podemos entender que é onde o nosso "boneco", dorian, parte
-linedrawer = turtle.Turtle() # A "ponta do lápis" responsável por traçar as tragetórias
+linedrawer = turtle.Turtle() # Linha estática que fica no nível das letras
 
 #Declaração das letras, que representam os possíveis destinos dos caminhos
 

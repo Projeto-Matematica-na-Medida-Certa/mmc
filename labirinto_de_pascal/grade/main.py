@@ -9,7 +9,7 @@ import random
 ############ Declaração dos icones do mapa ############
 
 dorian = turtle.Turtle() # Origem do caminho, podemos entender que é onde o nosso "boneco", dorian, parte
-linedrawer = turtle.Turtle() # A "ponta do lápis" responsável por traçar as tragetórias
+linedrawer = turtle.Turtle() # Linha estática que fica no nível das letras
 
 #Declaração das letras, que representam os possíveis destinos dos caminhos
 
@@ -34,6 +34,12 @@ d = turtle.Turtle()
 c = turtle.Turtle()
 b = turtle.Turtle()
 a = turtle.Turtle()
+
+v = turtle.Turtle()
+w = turtle.Turtle()
+x = turtle.Turtle()
+y = turtle.Turtle()
+
 
 ########################
 
@@ -60,30 +66,42 @@ rand = 50
 ##########################################
 
 linedrawer.speed(0)
-linedrawer.penup(), linedrawer.goto(-200,-50), linedrawer.pendown(), linedrawer.forward(400) 
+# linedrawer.penup(), linedrawer.goto(-200,-50), linedrawer.pendown(), linedrawer.forward(400) #Linha estática
 
 # Animação, onde cada letra parte de um mesmo ponto, e vai em direção ao seu local no mapa
-k.penup(), k.goto(   0, - 50), k.left(90), k.pendown()
-l.penup(), l.goto(  20, - 50), l.left(90), l.pendown()
-m.penup(), m.goto(  40, - 50), m.left(90), m.pendown()
-n.penup(), n.goto(  60, - 50), n.left(90), n.pendown()
-o.penup(), o.goto(  80, - 50), o.left(90), o.pendown()
-p.penup(), p.goto( 100, - 50), p.left(90), p.pendown()
-q.penup(), q.goto( 120, - 50), q.left(90), q.pendown()
-r.penup(), r.goto( 140, - 50), r.left(90), r.pendown()
-s.penup(), s.goto( 160, - 50), s.left(90), s.pendown()
-t.penup(), t.goto( 180, - 50), t.left(90), t.pendown()
-u.penup(), u.goto( 200, - 50), u.left(90), u.pendown()
-j.penup(), j.goto(- 20, - 50), j.left(90), j.pendown()
-i.penup(), i.goto(- 40, - 50), i.left(90), i.pendown()
-h.penup(), h.goto(- 60, - 50), h.left(90), h.pendown()
-g.penup(), g.goto(- 80, - 50), g.left(90), g.pendown()
-f.penup(), f.goto(-100, - 50), f.left(90), f.pendown()
-e.penup(), e.goto(-120, - 50), e.left(90), e.pendown()
-d.penup(), d.goto(-140, - 50), d.left(90), d.pendown()
-c.penup(), c.goto(-160, - 50), c.left(90), c.pendown()
-b.penup(), b.goto(-180, - 50), b.left(90), b.pendown()
-a.penup(), a.goto(-200, - 50), a.left(90), a.pendown()
+
+a.penup(), a.goto(-200,  200), a.left(90), a.pendown()
+b.penup(), b.goto(-100,  200), b.left(90), b.pendown()
+c.penup(), c.goto(   0,  200), c.left(90), c.pendown()
+d.penup(), d.goto( 100,  200), d.left(90), d.pendown()
+e.penup(), e.goto( 200,  200), e.left(90), e.pendown()
+
+f.penup(), f.goto(-200, 100), f.left(90), f.pendown()
+g.penup(), g.goto(-100, 100), g.left(90), g.pendown()
+h.penup(), h.goto(   0, 100), h.left(90), h.pendown()
+i.penup(), i.goto( 100, 100), i.left(90), i.pendown()
+j.penup(), j.goto( 200, 100), j.left(90), j.pendown()
+
+k.penup(), k.goto(-200,    0), k.left(90), k.pendown()
+l.penup(), l.goto(-100,    0), l.left(90), l.pendown()
+m.penup(), m.goto(   0,    0), m.left(90), m.pendown() #Origem
+n.penup(), n.goto( 100,    0), n.left(90), n.pendown()
+o.penup(), o.goto( 200,    0), o.left(90), o.pendown()
+
+p.penup(), p.goto(-200, -100), p.left(90), p.pendown()
+q.penup(), q.goto(-100, -100), q.left(90), q.pendown()
+r.penup(), r.goto(   0, -100), r.left(90), r.pendown()
+s.penup(), s.goto( 100, -100), s.left(90), s.pendown()
+t.penup(), t.goto( 200, -100), t.left(90), t.pendown()
+
+u.penup(), u.goto(-200, -200), u.left(90), u.pendown()
+v.penup(), v.goto(-100, -200), v.left(90), v.pendown()
+w.penup(), w.goto(   0, -200), w.left(90), w.pendown()
+x.penup(), x.goto( 100, -200), x.left(90), x.pendown()
+y.penup(), y.goto( 200, -200), y.left(90), y.pendown()
+
+
+
 
 
 ####### INÍCIO - Controle do caminho de dorian #######
