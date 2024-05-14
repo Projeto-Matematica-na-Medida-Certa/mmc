@@ -110,7 +110,7 @@ for i_ in range(0, 200):
     y -= 10
     dorian.pendown(), dorian.speed(0), dorian.color("blue"), dorian.goto(x,y)
 
-  dorian.clear()
+  dorian.clear() # Tira o dorian da tela
 
   # Registrando em qual letra dorian chegou
   if x==0:
