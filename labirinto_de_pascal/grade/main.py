@@ -6,13 +6,23 @@ import random
 
 ###########
 
-############ Declaração dos icones do mapa ############
+############ INÍCIO - Declaração dos icones do mapa ############
 
 dorian = turtle.Turtle() # Origem do caminho, podemos entender que é onde o nosso "boneco", dorian, parte
 linedrawer = turtle.Turtle() # Linha estática que fica no nível das letras
 
 #Declaração das letras, que representam os possíveis destinos dos caminhos
 
+a = turtle.Turtle()
+b = turtle.Turtle()
+c = turtle.Turtle()
+d = turtle.Turtle()
+e = turtle.Turtle()
+f = turtle.Turtle()
+g = turtle.Turtle()
+h = turtle.Turtle()
+i = turtle.Turtle()
+j = turtle.Turtle()
 k = turtle.Turtle()
 l = turtle.Turtle()
 m = turtle.Turtle()
@@ -24,24 +34,13 @@ r = turtle.Turtle()
 s = turtle.Turtle()
 t = turtle.Turtle()
 u = turtle.Turtle()
-j = turtle.Turtle()
-i = turtle.Turtle()
-h = turtle.Turtle()
-g = turtle.Turtle()
-f = turtle.Turtle()
-e = turtle.Turtle()
-d = turtle.Turtle()
-c = turtle.Turtle()
-b = turtle.Turtle()
-a = turtle.Turtle()
-
 v = turtle.Turtle()
 w = turtle.Turtle()
 x = turtle.Turtle()
 y = turtle.Turtle()
 
 
-########################
+############ FIM - Declaração dos icones do mapa ############
 
 t.speed(0)
 

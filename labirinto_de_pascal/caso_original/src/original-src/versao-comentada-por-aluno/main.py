@@ -39,7 +39,7 @@ a = turtle.Turtle()
 
 t.speed(0)
 
-dorian.hideturtle(), linedrawer.hideturtle() # "Esconder" inicialmente o boneco enquanto ele não é devidamente setado no mapa
+dorian.hideturtle(), linedrawer.hideturtle() # "Esconder" inicialmente o boneco e a linha enquanto ele não é devidamente setado no mapa
 
 pi = math.pi
 
