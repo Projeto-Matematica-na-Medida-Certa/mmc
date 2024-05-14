@@ -74,6 +74,7 @@ r.penup(), r.goto( 140, - 50), r.left(90), r.pendown()
 s.penup(), s.goto( 160, - 50), s.left(90), s.pendown()
 t.penup(), t.goto( 180, - 50), t.left(90), t.pendown()
 u.penup(), u.goto( 200, - 50), u.left(90), u.pendown()
+
 j.penup(), j.goto(- 20, - 50), j.left(90), j.pendown()
 i.penup(), i.goto(- 40, - 50), i.left(90), i.pendown()
 h.penup(), h.goto(- 60, - 50), h.left(90), h.pendown()
