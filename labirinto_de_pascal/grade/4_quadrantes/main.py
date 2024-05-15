@@ -105,120 +105,121 @@ o.penup(),  o.goto( 200,    0),  o.left(90),  o.pendown()
 
 ####### INÍCIO - Controle do caminho de dorian #######
 
-for i_ in range (0, 50):
+# for i_ in range (0, 50):
 
-    x = 0
-    y = 0
+#     x = 0
+#     y = 0
+x = 0
+y = 0
+count = 0
+while (count <= 100):
+
+    dorian.penup()
+    dorian.goto(x,y) #Seta a posição inicial de dorian no inicio de cada partida
+
+    coin=random.randint(0,100) #coin: valor aleatório entre 0 a 100 que será comparado com o valor de rand
+    if coin > rand:
+        x += 100
+        dorian.pendown(), dorian.speed(6), dorian.color("red"), dorian.goto(x,y)
+    #t.clear()
+    else:
+        y += 100
+        dorian.pendown(), dorian.speed(6), dorian.color("blue"), dorian.goto(x,y)
+
+    count += 1
+
+
+    # Registrando em qual letra dorian chegou
+
+    if   x ==    0 and y ==    0:
+        m.forward(5)
+    elif x ==  100 and y ==    0:
+        n.forward(5)
+    elif x ==  200 and y ==    0:
+        o.forward(5)
+    elif x ==    0 and y ==  100:
+        h.forward(5)
+    elif x ==  100 and y ==  100:
+        i.forward(5)
+    elif x ==  200 and y ==  100:
+        j.forward(5)
+    elif x ==    0 and y ==  200:
+        c.forward(5)
+    elif x ==  100 and y ==  200:
+        d.forward(5)
+    elif x ==  200 and y ==  200:
+        e.forward(5)
     
-    count = 0
-    while (count <= 20):
-
-        dorian.penup()
-        dorian.goto(x,y) #Seta a posição inicial de dorian no inicio de cada partida
-
-        coin=random.randint(0,100) #coin: valor aleatório entre 0 a 100 que será comparado com o valor de rand
-        if coin > rand:
-            x += 100
-            dorian.pendown(), dorian.speed(3), dorian.color("red"), dorian.goto(x,y)
-        #t.clear()
-        else:
-            y += 100
-            dorian.pendown(), dorian.speed(3), dorian.color("blue"), dorian.goto(x,y)
-
-        count += 1
-
-
-        # Registrando em qual letra dorian chegou
-
-        if   x ==    0 and y ==    0:
-            m.forward(5)
-        elif x ==  100 and y ==    0:
-            n.forward(5)
-        elif x ==  200 and y ==    0:
-            o.forward(5)
-        elif x ==    0 and y ==  100:
-            h.forward(5)
-        elif x ==  100 and y ==  100:
-            i.forward(5)
-        elif x ==  200 and y ==  100:
-            j.forward(5)
-        elif x ==    0 and y ==  200:
-            c.forward(5)
-        elif x ==  100 and y ==  200:
-            d.forward(5)
-        elif x ==  200 and y ==  200:
-            e.forward(5)
-        
-        if x == 200 or y == 200:
-            x = 0
-            y = 0
-            dorian.clear()
+    if x == 200 or y == 200:
+        x = 0
+        y = 0
+        dorian.clear()
 
 
 
 
 
 
-        # if x ==   -200 and y ==  200:
-        #     a.forward(5)
-        # elif x == -100 and y ==  200:
-        #     b.forward(5)
-        # elif x ==    0 and y ==  200:
-        #     c.forward(5)
-        # elif x ==  100 and y ==  200:
-        #     d.forward(5)  
-        # elif x ==  200 and y ==  200:
-        #     e.forward(5)  
+    # if x ==   -200 and y ==  200:
+    #     a.forward(5)
+    # elif x == -100 and y ==  200:
+    #     b.forward(5)
+    # elif x ==    0 and y ==  200:
+    #     c.forward(5)
+    # elif x ==  100 and y ==  200:
+    #     d.forward(5)  
+    # elif x ==  200 and y ==  200:
+    #     e.forward(5)  
 
-        # elif x == -200 and y ==  100:
-        #     f.forward(5)
-        # elif x == -100 and y ==  100:
-        #     g.forward(5)
-        # elif x ==    0 and y ==  100:
-        #     h.forward(5)  
-        # elif x ==  100 and y ==  100:
-        #     i.forward(5)
-        # elif x ==  200 and y ==  100:
-        #     j.forward(5) 
+    # elif x == -200 and y ==  100:
+    #     f.forward(5)
+    # elif x == -100 and y ==  100:
+    #     g.forward(5)
+    # elif x ==    0 and y ==  100:
+    #     h.forward(5)  
+    # elif x ==  100 and y ==  100:
+    #     i.forward(5)
+    # elif x ==  200 and y ==  100:
+    #     j.forward(5) 
 
-        # elif x == -200 and y ==    0:
-        #     k.forward(5)
-        # elif x ==  100 and y ==    0:
-        #     l.forward(5)
-        # elif x ==    0 and y ==    0:
-        #     m.forward(5)  
-        # elif x == -100 and y ==    0:
-        #     n.forward(5)
-        # elif x == -200 and y ==    0:
-        #     o.forward(5)
+    # elif x == -200 and y ==    0:
+    #     k.forward(5)
+    # elif x ==  100 and y ==    0:
+    #     l.forward(5)
+    # elif x ==    0 and y ==    0:
+    #     m.forward(5)  
+    # elif x == -100 and y ==    0:
+    #     n.forward(5)
+    # elif x == -200 and y ==    0:
+    #     o.forward(5)
 
-        # elif x == -200 and y == -100:
-        #     p.forward(5)
-        # elif x == -100 and y == -100:
-        #     q.forward(5)
-        # elif x ==    0 and y == -100:
-        #     r.forward(5)  
-        # elif x ==  100 and y == -100:
-        #     s.forward(5)
-        # elif x ==  200 and y == -100:
-        #     t.forward(5)
+    # elif x == -200 and y == -100:
+    #     p.forward(5)
+    # elif x == -100 and y == -100:
+    #     q.forward(5)
+    # elif x ==    0 and y == -100:
+    #     r.forward(5)  
+    # elif x ==  100 and y == -100:
+    #     s.forward(5)
+    # elif x ==  200 and y == -100:
+    #     t.forward(5)
 
-        # elif x == -200 and y == -200:
-        #     u.forward(5)
-        # elif x == -100 and y == -200:
-        #     v.forward(5)
-        # elif x ==    0 and y == -200:
-        #     w.forward(5)  
-        # elif x ==  100 and y == -200:
-        #     w2.forward(5)
-        # elif x ==  200 and y == -200:
-        #     w3.forward(5)
+    # elif x == -200 and y == -200:
+    #     u.forward(5)
+    # elif x == -100 and y == -200:
+    #     v.forward(5)
+    # elif x ==    0 and y == -200:
+    #     w.forward(5)  
+    # elif x ==  100 and y == -200:
+    #     w2.forward(5)
+    # elif x ==  200 and y == -200:
+    #     w3.forward(5)
 
 
-        # if (abs(x) + abs(y) ) == 400:
-        #     x = 0
-        #     y = 0
-        #     dorian.clear() # Tira o dorian da tela
+    # if (abs(x) + abs(y) ) == 400:
+    #     x = 0
+    #     y = 0
+    #     dorian.clear() # Tira o dorian da tela
 
 
 
