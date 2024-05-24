@@ -13,15 +13,35 @@ linedrawer = turtle.Turtle() # Linha estática que fica no nível das letras
 
 #Declaração das letras, que representam os possíveis destinos dos caminhos
 
+t = turtle.Turtle() # Abreviação do turtle.Turtle()
+
 c  = turtle.Turtle()
+caminho_c = 0
+
 d  = turtle.Turtle()
+caminho_d = 0
+
 e  = turtle.Turtle()
+caminho_e = 0
+
 h  = turtle.Turtle()
+caminho_h = 0
+
 i  = turtle.Turtle()
+caminho_i = 0
+
 j  = turtle.Turtle()
-m  = turtle.Turtle() #Origem
+caminho_j = 0
+
+m  = turtle.Turtle()
+caminho_m = 0 #Origem
+
 n  = turtle.Turtle()
+caminho_n = 0
+
 o  = turtle.Turtle()
+caminho_o = 0
+
 
 
 ############ FIM - Declaração dos icones do mapa ############
@@ -90,26 +110,80 @@ for ciclos in range (1, 100):
 
     # Registrando em qual letra dorian chegou
 
-    if   x ==    0 and y ==    0:
-        m.forward(5)
-    elif x ==  100 and y ==    0:
-        n.forward(5)
-    elif x ==  200 and y ==    0:
-        o.forward(5)
+    if   x ==    0 and y ==    0: # m
+        # m.forward(5)
+        caminho_m += 1
+        t.pendown()
+        t.goto (x, y - 50)
+        t.write (caminho_m, align = "center", font = ("Arial", 12, "normal"))
+        t.penup()
+        
+    elif x ==  100 and y ==    0: # n
+        # n.forward(5)
+        caminho_n += 1
+        t.pendown()
+        t.goto (x, y - 50)
+        t.write (caminho_n, align = "center", font = ("Arial", 12, "normal"))
+        t.penup()
+        
+    elif x ==  200 and y ==    0: # o
+        # o.forward(5)
+        caminho_o += 1
+        t.pendown()
+        t.goto (x, y - 50)
+        t.write (caminho_o, align = "center", font = ("Arial", 12, "normal"))
+        t.penup()
+        
 
-    elif x ==    0 and y ==  100:
-        h.forward(5)
-    elif x ==  100 and y ==  100:
-        i.forward(5)
-    elif x ==  200 and y ==  100:
-        j.forward(5)
+    elif x ==    0 and y ==  100: # h
+        # h.forward(5)
+        caminho_h += 1
+        t.pendown()
+        t.goto (x, y - 50)
+        t.write (caminho_h, align = "center", font = ("Arial", 12, "normal"))
+        t.penup()
+        
+    elif x ==  100 and y ==  100: # i
+        # i.forward(5)
+        caminho_i += 1
+        t.pendown()
+        t.goto (x, y - 50)
+        t.write (caminho_i, align = "center", font = ("Arial", 12, "normal"))
+        t.penup()
+        
+    elif x ==  200 and y ==  100: # j
+        # j.forward(5)
+        caminho_j += 1
+        t.pendown()
+        t.goto (x, y - 50)
+        t.write (caminho_j, align = "center", font = ("Arial", 12, "normal"))
+        t.penup()
+        
 
-    elif x ==    0 and y ==  200:
-        c.forward(5)
-    elif x ==  100 and y ==  200:
-        d.forward(5)
-    elif x ==  200 and y ==  200:
-        e.forward(5)
+    elif x ==    0 and y ==  200: # c
+        # c.forward(5)
+        caminho_c += 1
+        t.pendown()
+        t.goto (x, y - 50)
+        t.write (caminho_c, align = "center", font = ("Arial", 12, "normal"))
+        t.penup()
+        
+    elif x ==  100 and y ==  200: # d
+        # d.forward(5)
+        caminho_d += 1
+        t.pendown()
+        t.goto (x, y - 50)
+        t.write (caminho_d, align = "center", font = ("Arial", 12, "normal"))
+        t.penup()
+        
+    elif x ==  200 and y ==  200: # e
+        # e.forward(5)
+        caminho_e += 1
+        t.pendown()
+        t.goto (x, y - 50)
+        t.write (caminho_e, align = "center", font = ("Arial", 12, "normal"))
+        t.penup()
+        
     
 
     if x == 200 or y == 200: # Se chegar no limite da grade, reinicia
