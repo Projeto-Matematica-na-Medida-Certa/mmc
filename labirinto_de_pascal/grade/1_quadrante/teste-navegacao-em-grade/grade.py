@@ -2,7 +2,10 @@ import turtle
 
 # Definição do tamanho da grade
 linhas  = 4
-colunas = 4 
+colunas = 4
+tamanho_da_celula = 100 # Tamanho de cada espaço da grade
+
+
 
 # Inicializar o turtle
 t = turtle.Turtle()
@@ -33,7 +36,6 @@ def calcula_caminho (linhas, colunas):
 
 # Função que desenha a grade e coloca os caminhos e índices na tela
 def desenha_grade (grade, linhas, colunas):
-    tamanho_da_celula = 100 # Tamanho de cada espaço da grade
 
     for j in range (linhas):
         for i in range (colunas):
@@ -59,6 +61,24 @@ def desenha_grade (grade, linhas, colunas):
             t.goto ( x + tamanho_da_celula/2, y - tamanho_da_celula/2 - 20)
             t.write (index , align = "center", font = ("Arial", 8, "normal"))
 
+# Função que escreve total de caminhos em cada linha (2^n)
+def soma_de_caminhos (grade, linhas):
+    for i in range (linhas):
+        x = 0
+        y = i * tamanho_da_celula
+
+        x_f = i * tamanho_da_celula
+        y_f = 0
+
+        t.goto (x, y)
+        t.pendown()
+        t.right(45)
+        t.forward(abs(x - x_f, y - y_f))
+        t.penup()
+        t.goto(x_f, y_f - 20)
+        t.write(2**{i - 1}, align = "center", font = ("Arial", 12, "normal"))
+
+
 ##### INÍCIO DA MAIN #####
 
 # Calcular caminhos da grade
@@ -66,6 +86,10 @@ grade = calcula_caminho (linhas, colunas)
 
 # Desenhar a grade com o número de caminhos e índices de cada célula
 desenha_grade (grade, linhas, colunas)
+
+if linhas == colunas:
+    # Desenhar número total de caminhos por diagonal
+    soma_de_caminhos(grade, linhas)
 
 # Manter a janela aberta
 turtle.done()
