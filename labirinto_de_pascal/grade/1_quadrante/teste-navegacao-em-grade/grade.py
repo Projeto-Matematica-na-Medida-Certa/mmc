@@ -10,7 +10,7 @@ tamanho_da_celula = 100 # Tamanho de cada espaço da grade
 # Inicializar o turtle
 t = turtle.Turtle()
 screen = turtle.Screen()
-t.speed(10) # Velocidade
+t.speed(0) # Velocidade inicial
 t.penup()
 
 
@@ -50,16 +50,16 @@ def desenha_grade (grade, linhas, colunas):
             t.pendown()
             for _ in range (4):
                 t.forward(tamanho_da_celula)
-                t.right(90)
+                t.left(90)
             t.penup()
 
             # Escreve o número de caminhos na célula
-            t.goto (x + tamanho_da_celula/2, y - tamanho_da_celula/2)
+            t.goto (x + tamanho_da_celula/2, y + tamanho_da_celula/2)
             t.write (grade [i][j], align = "center", font = ("Arial", 12, "normal"))
 
             # Escreve o índice ao lado do ponto superior esquerdo da célula
             index = f"({i}, {j})"
-            t.goto ( x + tamanho_da_celula/2, y - tamanho_da_celula/2 - 20)
+            t.goto ( x + tamanho_da_celula/2, y + tamanho_da_celula/2 - 20)
             t.write (index , align = "center", font = ("Arial", 8, "normal"))
 
 # Função que escreve total de caminhos em cada linha (2^n)
