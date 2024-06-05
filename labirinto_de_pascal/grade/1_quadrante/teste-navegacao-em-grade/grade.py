@@ -9,6 +9,7 @@ tamanho_da_celula = 100 # Tamanho de cada espaço da grade
 
 # Inicializar o turtle
 t = turtle.Turtle()
+screen = turtle.Screen()
 t.speed(10) # Velocidade
 t.penup()
 
@@ -62,24 +63,31 @@ def desenha_grade (grade, linhas, colunas):
             t.write (index , align = "center", font = ("Arial", 8, "normal"))
 
 # Função que escreve total de caminhos em cada linha (2^n)
-def soma_de_caminhos (grade, linhas):
+def soma_de_caminhos (linhas):
     for i in range (linhas):
         x = 0
-        y = i * tamanho_da_celula
+        y = (i + 1) * tamanho_da_celula
 
-        x_f = i * tamanho_da_celula
+        x_f = (i + 1) * tamanho_da_celula
         y_f = 0
 
+        t.speed(3) # Dimiuindo a velocidade
+        t.penup()
         t.goto (x, y)
         t.pendown()
-        t.right(45)
-        t.forward(abs(x - x_f, y - y_f))
+        t.goto(x_f, y_f)
         t.penup()
         t.goto(x_f, y_f - 20)
-        t.write(2**{i - 1}, align = "center", font = ("Arial", 12, "normal"))
-
+        t.write(2**i, align = "center", font = ("Arial", 12, "normal"))
 
 ##### INÍCIO DA MAIN #####
+
+# Título do Programa
+screen.title ('Labirinto de Pascal - Projeto MMC')
+
+# Cor de fundo do programa
+screen.bgcolor("white")
+
 
 # Calcular caminhos da grade
 grade = calcula_caminho (linhas, colunas)
@@ -89,7 +97,7 @@ desenha_grade (grade, linhas, colunas)
 
 if linhas == colunas:
     # Desenhar número total de caminhos por diagonal
-    soma_de_caminhos(grade, linhas)
+    soma_de_caminhos(linhas)
 
 # Manter a janela aberta
 turtle.done()
