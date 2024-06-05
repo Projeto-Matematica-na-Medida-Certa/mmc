@@ -64,20 +64,28 @@ def desenha_grade (grade, linhas, colunas):
 
 # Função que escreve total de caminhos em cada linha (2^n)
 def soma_de_caminhos (linhas):
-    for i in range (linhas):
-        x = 0
-        y = (i + 1) * tamanho_da_celula
+    for i in range (2*linhas -1): # Quantidade de diagonais de somas de caminhos
+        
+        if x <= linhas * tamanho_da_celula and y <= colunas * tamanho_da_celula:
+            x_inicial = 0
+            y_inicial = (i + 1) * tamanho_da_celula
 
-        x_f = (i + 1) * tamanho_da_celula
-        y_f = 0
+            x_final = (i + 1) * tamanho_da_celula
+            y_final = 0
+        else:
+            x_inicial = (i + 1) * tamanho_da_celula
+            y_inicial = colunas * tamanho_da_celula # Fixado como o topo da grade
+
+            x_final = 
+            y_final = 
 
         t.speed(3) # Dimiuindo a velocidade
         t.penup()
-        t.goto (x, y)
+        t.goto (x_inicial, y_inicial)
         t.pendown()
-        t.goto(x_f, y_f)
+        t.goto(x_final, y_final)
         t.penup()
-        t.goto(x_f, y_f - 20)
+        t.goto(x_final, y_final - 20)
         t.write(2**i, align = "center", font = ("Arial", 12, "normal"))
 
 ##### INÍCIO DA MAIN #####
